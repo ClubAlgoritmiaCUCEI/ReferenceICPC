@@ -28,7 +28,7 @@ ll logpow(ll x, ll y, ll m=1e7+1) {
         return 1;
     if (y == 2)
         return (x * x) % m;
-    ll r = logpow(x, y / 2);
+    ll r = logpow(x, y / 2, m);
     if (y % 2)
         return ((x * r) % m * r) % m;
     return (r * r) % m;
